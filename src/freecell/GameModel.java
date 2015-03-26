@@ -76,11 +76,7 @@ public class GameModel implements Iterable<CardPile> {
         
         _notifyEveryoneOfChanges();
     }
-    
-    //TODO: This is a little messy right now, having methods that both 
-    //      return a pile by number, and the array of all piles.
-    //      Needs to be simplified.
-    
+        
     // Iterate through card pile
     public Iterator<CardPile> iterator()
     {
@@ -121,8 +117,6 @@ public class GameModel implements Iterable<CardPile> {
     {
         return _foundation;
     }
-    
-
     
     //Moving card from one pile to another pile
     public boolean moveFromPileToPile(CardPile source, CardPile target)

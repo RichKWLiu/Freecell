@@ -52,8 +52,8 @@ public class Card
         _faceUp = false;
         
         //... Create the file name from the face and suit
-        char faceChar = "a23456789tjqk".charAt(_face.ordinal());
-        char suitChar = "shcd".charAt(_suit.ordinal());
+        char faceChar = "facetest".charAt(_face.ordinal());
+        char suitChar = "suittest".charAt(_suit.ordinal());
         String cardFilename = "" + faceChar + suitChar + ".gif";
         
         String path = PACKAGE_NAME + IMAGE_PATH + cardFilename;
