@@ -157,7 +157,7 @@ public class GameModel implements Iterable<CardPile> {
 
         do {
             worthTrying = false;  // Toggle flag
-            //... Try moving each of the free cells to graveyard.
+
             for (CardPile freePile : _freeCells)
             {
                 for (CardPile gravePile : _foundation)
@@ -165,13 +165,11 @@ public class GameModel implements Iterable<CardPile> {
                     worthTrying |= moveFromPileToPile(freePile, gravePile);
                 }
             }
-            //... Try moving each of the player piles to graveyard.
             for (CardPile cardPile : _tableau) {
                 for (CardPile gravePile : _foundation) {
                     worthTrying |= moveFromPileToPile(cardPile, gravePile);
                 }
             }
-            
         } while (worthTrying);
     }
     
